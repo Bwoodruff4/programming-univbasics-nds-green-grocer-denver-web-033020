@@ -109,7 +109,7 @@ def checkout(cart, coupons)
   # some irritated customers
   
   consolidated_cart = consolidate_cart(cart)
-  couponed_cart = apply_coupons(consolidated_cart)
+  couponed_cart = apply_coupons(consolidated_cart,coupons)
   cart_final = apply_clearance(couponed_cart)
   
   i=0
@@ -124,6 +124,6 @@ def checkout(cart, coupons)
     total= total * 0.90
   end
   
-  
+  return total
   
 end
